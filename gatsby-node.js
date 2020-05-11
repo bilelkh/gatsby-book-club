@@ -20,10 +20,11 @@ exports.createPages = ({graphql, actions}) => {
     }
 
     result.data.allBook.edges.forEach(book =>{
+      console.log("===book===",book)
       createPage({
         path: `/book/${book.node.id}`,
         component: bookTemplate,
-        context: {bookId: book.node.id}
+        context: {bookId: book.node}
       })
     });
   })

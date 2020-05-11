@@ -24,6 +24,7 @@ export const query = graphql`
 }
 `
 const IndexPage = (props) => {
+  console.log("===IndexPage props===",props)
   return (
     <Layout>
       {props.data.allBook.edges.map(edge => (
